@@ -38,7 +38,7 @@ jobs:
       - name: Create GitHub Release & Upload Asset
         uses: softprops/action-gh-release@v2
         with:
-          files: build/header-injector.phar
+          files: build/pq.phar
           prerelease: ${{ contains(github.ref, '-') }} # Auto-marks tags with '-rc', '-beta', etc. as pre-releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

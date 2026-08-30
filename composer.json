@@ -1,0 +1,29 @@
+{
+    "name": "neblabs/pq",
+    "description": "Query an associative php array returned from a file.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Neblabs\\PQ\\": "src/",
+            "Neblabs\\PQ\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rafark",
+            "email": "rafarks@gmail.com"
+        }
+    ],
+
+    "require": {
+        "symfony/console": "^8.1",
+        "adbario/php-dot-notation": "^3.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.3"
+    },
+    "scripts": {
+        "test": " XDEBUG_MODE=debug XDEBUG_SESSION=1 ./vendor/bin/phpunit"
+    }
+}

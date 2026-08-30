@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+
+<?php
+
+require __DIR__.'/../vendor/autoload.php';
+
+use Neblabs\PQ\PQGetCommand;
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+$pqGet = new PQGetCommand;
+$application->addCommand($pqGet->get(...));
+
+$application->run();

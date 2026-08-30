@@ -3,6 +3,19 @@
 `pq` is a nice & mighty command-line tool for querying an associative PHP array returned by a file. It uses dotted paths to read nested values.
 
 It currently only reads values from an associative array.
+
+## Installation
+
+### Requirements
+- PHP 8.1+
+- Bash (to run the installer only)
+
+Run the installer:
+```bash
+curl -L https://raw.githubusercontent.com/neblabs/pq/main/bin/install.sh | bash
+```
+
+This will put it in ~/.local/bin so make sure you have that in your path.
 ## Usage
 
 ```console
@@ -14,9 +27,8 @@ pq get <file> <path>
 - `<file>` — required PHP file that returns an array.
 - `<path>` — dotted path to the value to print. Examples: `version`, `user.name`, or `user.profile.preferences.theme`.
 
-## Input files
-
-The input file must return a PHP array:
+## File
+The input file must be a valid PHP file and must return an array. Example:
 
 ```php
 <?php

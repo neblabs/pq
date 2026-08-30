@@ -1,0 +1,17 @@
+{
+  "chmod": "0755",
+  "main": "bin/pq",
+  "output": "build/pq.phar",
+  "directories": ["src"],
+  "finder": [
+    {
+      "name": "*.php",
+      "exclude": ["Tests", "tests"],
+      "in": "vendor"
+    }
+  ],
+  "dump-autoload": true,
+  "compactors": [
+    "KevinGH\\Box\\Compactor\\Php"
+  ]
+}

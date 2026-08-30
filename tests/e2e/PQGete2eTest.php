@@ -22,25 +22,25 @@ class PQGete2ETest extends TestCase
 
         $this->assertSame(
             '1.2.3',
-            trim(shell_exec(static::$EXECUTABLE . " get $file --path version"))
+            trim(shell_exec(static::$EXECUTABLE . " get $file version"))
         );
 
         # lvl 2
         $this->assertSame(
             'Rafa',
-            trim(shell_exec(static::$EXECUTABLE . " get $file --path user.name"))
+            trim(shell_exec(static::$EXECUTABLE . " get $file user.name"))
         );
 
         # lvl 4
         $this->assertSame(
             'dark',
-            trim(shell_exec(static::$EXECUTABLE . " get $file --path user.profile.preferences.theme"))
+            trim(shell_exec(static::$EXECUTABLE . " get $file user.profile.preferences.theme"))
         );
 
         # returns indexed array values separated by a new line. possibly to configure this in the future as an option
         $this->assertSame(
             "read\nwrite",
-            trim(shell_exec(static::$EXECUTABLE . " get $file --path advanced.permissions"))
+            trim(shell_exec(static::$EXECUTABLE . " get $file advanced.permissions"))
         );
     }
 
@@ -48,7 +48,7 @@ class PQGete2ETest extends TestCase
     {
         $file = __DIR__ . '/fixtures/array-assoc.php';
 
-        exec(static::$EXECUTABLE . " get $file --path idontexist", $output, $res);
+        exec(static::$EXECUTABLE . " get $file idontexist", $output, $res);
 
         $this->assertSame(1, $res);
         $this->assertEquals([''], $output); # prints a new line, probably a todo for later to figure this out

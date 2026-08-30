@@ -16,6 +16,9 @@
       <executable path="composer" />
     </execution>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="PhpDebugGeneral" listening_started="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
@@ -83,6 +86,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/" />
     </key>
   </component>
@@ -102,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1788116928568</updated>
       <workItem from="1788116928568" duration="267000" />
-      <workItem from="1788117212342" duration="7214000" />
+      <workItem from="1788117212342" duration="9570000" />
     </task>
     <servers />
   </component>

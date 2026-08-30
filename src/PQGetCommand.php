@@ -17,7 +17,7 @@ class PQGetCommand extends Command
     #[AsCommand('get')]
     public function get(
         #[Argument('The file that returns the php array.')] string $file,
-        #[Option('The dotted path key to the item. examples: version, user.name')] string $path = ''
+        #[Argument('The dotted path key to the item. examples: version, user.name')] string $path
     ): int
     {
         $data = new Dot($this->readArray($file));

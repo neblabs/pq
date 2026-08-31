@@ -7,7 +7,7 @@ It currently only reads values from an associative array.
 ## Installation
 
 ### Requirements
-- PHP 8.1+
+- PHP 8.4+
 - Bash (to run the installer only)
 
 Run the installer:
@@ -35,7 +35,6 @@ The input file must be a valid PHP file and must return an array. Example:
 
 return [
     'version' => '1.2.3',
-    'hits' => 7,
     'user' => [
         'name' => 'Rafa',
         'profile' => [

@@ -28,11 +28,19 @@ class PQGetCommand extends Command
 
         $value = $data->get($path);
 
-        # this one possible to be added as an option
-        $separator = "\n";
+        # possible options:
+        # separate the value exporters into a separate abstract type with something like write(value) and canHandle(value, input)
+        # the interesting part is that we may have exporters for different options. eg:
+        # StringBooleanWriter: this one is the default. writes literal 'true' or 'false'
+        # IntBooleanWriter: this one writes 1 or 0 when the idk, --intbool is passed to the command.
+        # stderrBooleanWriter: this one exits with 0 when true and 1 when false, when  --errbool is passed to the command. now this one
 
         if (is_array($value)) {
+            # this one possible to be added as an option
+            $separator = "\n";
             echo implode($separator, $value);
+        } else if (is_bool($value)) {
+            echo $value? 'true' : 'false';
         } else {
             echo $value;
         }

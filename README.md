@@ -75,6 +75,19 @@ read
 write
 ```
 
+## Supported Data
+
+| type                   | example in `php`      | stdout                                                                              | exit code |
+|------------------------|-----------------------|-------------------------------------------------------------------------------------|-----------|
+| string                 | `'hello'`             | `hello`                                                                             | 0         |
+| number                 | `1.2.3`               | `1.2.3`                                                                             | 0         |
+| array                  | `['apple', 'banana']` | `apple`\n`banana` (* \n represents a new line for illustration, not the literal \n) | 0         |
+| boolean (true)         | `true`                | `true`                                                                              | 0         |
+| boolean (false)        | `false`               | `false`                                                                             | 0         |
+| *undefined/null*       | n/a                   |                                                                                     | 1         |
+
+**So for booleans do not check for the exit code, as false will return 0. An exit code of 1 will only happen when the key does not exist*
+
 ## Exit statuses
 
 - `0` — the requested path was found and its value was printed.
